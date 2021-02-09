@@ -26,5 +26,4 @@
 ### Cons:
 
 - User has to scroll down to navigate through the documentation, that may be inconveninet if the documentation is large
-- Missing some of the sample response codes
 - Provides only curl code and it is only shown after you click `execute` button
