@@ -41,7 +41,7 @@ will require implementing the search bar from start and converting the existing
 `yml` configuration file to `json` format. In my assessment, investing in
 building the current documentation in Swagger would be the wiser choice.
 
-### Some features of `readme.io` worth implementing on other platforms
+### Some features of `DapperBox` worth implementing on other platforms
 
 - The expandable side pane facilitates navigating the page and would be a nice
   addition to swagger
