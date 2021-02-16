@@ -24,3 +24,11 @@ This is an analysis of the ReDoc API visualizer that allows for projects to publ
 - The different types of requests aren’t grouped together within each endpoint.
 - For a fair amount of requests, not all of the possible results of the execution of those requests are shown. For example, some requests only show the 200, and others only show the 400 or 405.
 - You can’t execute any code within the request.
+
+# SearchBox component
+
+## Imports
+
+## Exports
+
+## SearchBox Class
