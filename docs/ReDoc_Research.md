@@ -40,3 +40,76 @@ This is an analysis of the ReDoc API visualizer that allows for projects to publ
 ## Exports
 
 ## SearchBox Class
+What we're interested in is how the results are displayed once you enter. This is the code that listens for keyboard events.
+ ```
+ handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.keyCode === 27) {
+      // ESQ
+      this.clear();
+    }
+    if (event.keyCode === 40) {
+      // Arrow down
+      this.setState({
+        activeItemIdx: Math.min(this.state.activeItemIdx + 1, this.state.results.length - 1),
+      });
+      event.preventDefault();
+    }
+    if (event.keyCode === 38) {
+      // Arrow up
+      this.setState({
+        activeItemIdx: Math.max(0, this.state.activeItemIdx - 1),
+      });
+      event.preventDefault();
+    }
+    if (event.keyCode === 13) {
+      // enter
+      const activeResult = this.state.results[this.state.activeItemIdx];
+      if (activeResult) {
+        const item = this.props.getItemById(activeResult.meta);
+        if (item) {
+          this.props.onActivate(item);
+        }
+      }
+    }
+  };
+```
+When you press enter, the endpoints show up as search results. Key code being 13 represents pressing enter on the keyboard. If we could somehow change it so that it does this process automatically without using the condition of `event.keyCode === 13`, then we're all set with the feature of automatically showing results and having the deep search. Unfortunately, this is ReDoc, and the ONTAP REST API having the same Typescript is a pipe dream. However, to look further into how ReDoc compares the search term to the other endpoints, we'll probably have to look at the "markers" that are made. The following is the return statement that displays the search results.
+```
+return (
+      <SearchWrap role="search">
+        {this.state.term && <ClearIcon onClick={this.clear}>×</ClearIcon>}
+        <SearchIcon />
+        <SearchInput
+          value={this.state.term}
+          onKeyDown={this.handleKeyDown}
+          placeholder="Search..."
+          aria-label="Search"
+          type="text"
+          onChange={this.search}
+        />
+        {results.length > 0 && (
+          <PerfectScrollbarWrap
+            options={{
+              wheelPropagation: false,
+            }}
+          >
+            <SearchResultsBox data-role="search:results">
+              {results.map((res, idx) => (
+                <MenuItem
+                  item={Object.create(res.item, {
+                    active: {
+                      value: idx === activeItemIdx,
+                    },
+                  })}
+                  onActivate={this.props.onActivate}
+                  withoutChildren={true}
+                  key={res.item.id}
+                  data-role="search:result"
+                />
+              ))}
+            </SearchResultsBox>
+          </PerfectScrollbarWrap>
+        )}
+      </SearchWrap>
+    );
+```
