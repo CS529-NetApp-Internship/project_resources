@@ -8,11 +8,14 @@ Add your notes here
 
 ## Determine how a search feature could be implemented
 
-Add your notes here
+- Search box implementation
+- Search functinality implementation
 
 ## Determine the basic functionalities the feature would have
 
-Add your notes here
+- Real-time search vs the user types query and presses button
+- Return methods that have matching search string
+- Pull the methods to the top of the page and highlight matching phrases
 
 ## Determine the aspects/attributes of the YAML file that are relevant for a deep search feature
 
@@ -39,7 +42,7 @@ Sample code block from the yaml file NetApp provided
 
 ```
 
-List of attributes that could be useful for the deep search feature
+We need to discuss if we want to pick specific attributes or iterate through all of them in the yaml file. Here is the list of attributes that could be useful for the deep search feature
 
 - `tags`
 
@@ -47,7 +50,7 @@ List of attributes that could be useful for the deep search feature
 
 - `name`
 
-    `parameter` key has the list of parameters as value. Each list element represents a dictionary where one of the key is `name`. We could compare its value with user provided search phrase, and return as a search result.
+    `parameter` key has the list of parameters as value. Each list element represents a dictionary where one of the key is `name`. We could compare its value with user provided search phrase, and if the match is found return the method as a search result.
 
 - `description`
 
