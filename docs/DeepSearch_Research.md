@@ -4,22 +4,23 @@ Investigate adding Deep Search to NetApp's Swagger UI.
 
 ## Determine where a search feature could be implemented
 
-Add your notes here
-
 ## Determine how a search feature could be implemented
 
 - Search box implementation
-- Search functinality implementation
+    - Implementing the actual search box itself in the UI -- where should it go, real-time search vs query button, etc.
+- Search functionality implementation
+    - How will the search feature actually function -- what portions of the YAML file will it query?
 
 ## Determine the basic functionalities the feature would have
 
 - Real-time search vs the user types query and presses button
 - Return methods that have matching search string
-- Pull the methods to the top of the page and highlight matching phrases
+- How will we display the search results?
+    - Pull the methods to the top of the page and highlight matching phrases
 
 ## Determine the aspects/attributes of the YAML file that are relevant for a deep search feature
 
-Sample code block from the yaml file NetApp provided
+*Sample code block from the yaml file NetApp provided:*
 
 ```yaml
 
@@ -42,7 +43,7 @@ Sample code block from the yaml file NetApp provided
 
 ```
 
-We need to discuss if we want to pick specific attributes or iterate through all of them in the yaml file. Here is the list of attributes that could be useful for the deep search feature
+*We need to discuss if we want to pick specific attributes or iterate through all of them in the yaml file. Here is the list of attributes that could be useful for the deep search feature:*
 
 - `tags`
 
