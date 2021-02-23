@@ -16,8 +16,12 @@ Currently, in Swagger UI, there is no official feature or formalized support for
 - [Issue with code blocks & references to other discussions about adding a filtering/basic search feature to Swagger UI.](https://github.com/swagger-api/swagger-ui/issues/1096)
 - [Adds a navigation and search sidebar to Swagger UI.](https://github.com/swagger-api/swagger-ui/issues/4373)
     - Looks similar to say the search bar and sidebar feature in something like README.io.  
+- [Adds a basic search/filtering bar to Swagger UI (circa December 2020)](https://github.com/swagger-api/swagger-ui/pull/6744). Expands heavily on the filtering feature. [Same author also added an advanced search feature to Swagger UI (late January).](https://github.com/swagger-api/swagger-ui/pull/6851)
 
-
+### Other Ways to Implement Search Bars
+- [Simple Search-bar Component & Functionality in React](https://medium.com/@pradityadhitama/simple-search-bar-component-functionality-in-react-6589fda3385d)
+- [ApiBlaze: Designing the API Search Bar](https://admantium.medium.com/apiblaze-designing-the-api-search-bar-507a89a401e2)
+- [Building a Simple Dynamic Search Bar in React.js](https://levelup.gitconnected.com/building-a-simple-dynamic-search-bar-in-react-js-f1659d64dfae)
 
 ## Determine how a search feature could be implemented
 
