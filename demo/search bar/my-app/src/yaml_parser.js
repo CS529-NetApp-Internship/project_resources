@@ -1,9 +1,9 @@
+import raw from 'raw.macro';
+
 const yaml = require('js-yaml');
-const fs = require('fs');
+var config = yaml.load(raw('./swagger.yaml'));
 
-var config = yaml.load(fs.readFileSync('../data/swagger.yaml', 'utf8'));
-
-const parse = function() {  
+const parse = function() {
   var state = {
     endpoints: [],
     searchTerm: "",
@@ -20,8 +20,11 @@ const parse = function() {
       }
   return state
 }
-console.log(parse())
-// export default parse;
+// console.log(parse())
+export default parse;
+
+
+
 
 
 
