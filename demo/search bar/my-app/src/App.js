@@ -40,7 +40,7 @@ class App extends React.Component {
           type="text"
           value={this.state.searchTerm}
           onChange={this.editSearchTerm}
-          placeholder="Search for a name!"
+          placeholder="Search for an API component!"
         />
         <EndpointContainer endpoints={this.dynamicSearch()} />
       </div>
