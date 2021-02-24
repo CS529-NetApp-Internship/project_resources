@@ -10,9 +10,12 @@ class Endpoint extends Component {
       case "get":
         tagBackgroundColor = "#1165ed";
         break;
-      case "del":
+      case "delete":
         tagBackgroundColor = "red";
         break;
+      case "patch":
+          tagBackgroundColor = "aqua";
+          break;
       case "put":
         tagBackgroundColor = "#e3e314";
         break;

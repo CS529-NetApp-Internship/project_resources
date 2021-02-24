@@ -3,18 +3,32 @@ import React from "react";
 import "./App.css";
 
 import EndpointContainer from "./EndpointContainer";
+// import parse from "./yaml_parser";
 
 class App extends React.Component {
   state = {
     endpoints: [
-      { id: "operation1", type: "get", desc: "does operation1 things" },
-      { id: "operation2", type: "post", desc: "does operation2 things" },
-      { id: "operation3", type: "del", desc: "does operation3 things" },
-      { id: "operation4", type: "put", desc: "does operation4 things" },
-      { id: "operation14", type: "get", desc: "does operation14 things" },
+      { id: '/storage/volumes', type: 'get', desc: 'description' },
+      { id: '/storage/volumes', type: 'post', desc: 'description' },
+      { id: '/storage/volumes/{uuid}', type: 'get', desc: 'description' },
+      {
+        id: '/storage/volumes/{uuid}',
+        type: 'patch',
+        desc: 'description'
+      },
+      {
+        id: '/storage/volumes/{uuid}',
+        type: 'delete',
+        desc: 'description'
+      },
+      {
+        id: '/storage/volumes/{volume.uuid}/metrics',
+        type: 'get',
+        desc: 'description'
+      }
     ],
-    searchTerm: "",
-  };
+    searchTerm: ''
+  }
 
   // DATA Model:
   // endpoints = [
