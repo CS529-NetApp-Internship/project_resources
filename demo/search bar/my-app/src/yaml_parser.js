@@ -1,7 +1,7 @@
 import raw from 'raw.macro';
 
 const yaml = require('js-yaml');
-var config = yaml.load(raw('./swagger.yaml'));
+var config = yaml.load(raw('../data/swagger.yaml'));
 
 const parse = function() {
   var state = {
@@ -9,11 +9,11 @@ const parse = function() {
     searchTerm: "",
   }
   
-  for (var key in config.paths) {
+  for (var operation in config.paths) {
   
-      for(var nest_key in config.paths[key]){
+      for(var method in config.paths[operation]){
   
-          state.endpoints.push({id:key,type:nest_key,desc:"description"})
+          state.endpoints.push({id:operation,type:method,desc:"description"})
           
         }
         
