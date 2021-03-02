@@ -27,3 +27,18 @@
 
 - User has to scroll down to navigate through the documentation, that may be inconveninet if the documentation is large
 - Provides only curl code and it is only shown after you click `execute` button
+
+## Swagger UI Project File Overview
+Main Directories of Swagger UI:
+- `/dev-helpers/`
+- `/dist/`
+- `/docs/`
+- `/src/`
+  - `/core/`
+  - `/img/`
+  - `/mako/`
+  - `/plugins/`
+  - `/standalone/`
+  - `/style/`
+- `/swagger-ui-dist-package/`
+- `/test/`
