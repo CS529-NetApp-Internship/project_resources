@@ -42,3 +42,24 @@ Main Directories of Swagger UI:
   - `/style/`
 - `/swagger-ui-dist-package/`
 - `/test/`
+
+### `/dev-helpers/`
+
+Holds an `/examples/` directory that holds the YAML files used by Swagger! The `index.html` file can also be found here.
+
+### `/src/`
+
+This directory holds the source code for Swagger UI. This is where new features can be implemented.
+
+Directory Overview:
+- `/core/`
+  - `/components/`
+  - `/containers/`
+  - `/plugins/`
+  - `/presets/`
+  - `index.js`
+- `/img/`: contains logos; images
+- `/mako/`
+- `/plugins/`
+- `/standalone/`
+- `/style/`: contains all the `.scss` that style the Swagger UI web page
