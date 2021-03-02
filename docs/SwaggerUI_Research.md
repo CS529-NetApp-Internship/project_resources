@@ -2,7 +2,7 @@
 
 ## Overview
 
-[Swagger UI](https://swagger.io/resources/webinars/getting-started-with-swagger/) is an open source API visualizer, that lets you automatically generate interactive visual documentation from Open API specification.
+[Swagger UI](https://swagger.io/resources/webinars/getting-started-with-swagger/) is an open source API visualizer, that lets you automatically generate interactive visual documentation from Open API specification. It is a collection of HTML, JavaScript, and CSS assets that dynamically generate documentation for applicable APIs.
 
 ## Available Features
 
@@ -53,13 +53,22 @@ This directory holds the source code for Swagger UI. This is where new features 
 
 Directory Overview:
 - `/core/`
-  - `/components/`
+  - `/components/`: contains all the (layout) components making up the Swagger UI
+    - `/auth/`: authorization files
+    - `/layouts/`: base jsx files
+    - `/providers/`: allows for the additon of providers which are a generic bridges to third-party components
   - `/containers/`
-  - `/plugins/`
-  - `/presets/`
+  - `/plugins/`: contains all the individual directories for respesctive plugins, each directory has the code needed for the plugin feature
+    - `/auth/`
+    - `/config/`
+    - `/deep-linking/`
+    - `/err/`
+    - `/filter/`
+    - etc.... there are a variety of other directories containing plugin implementations
+  - `/presets/`: seems to set the preset/base plugins
   - `index.js`
 - `/img/`: contains logos; images
 - `/mako/`
-- `/plugins/`
-- `/standalone/`
+- `/plugins/`: contains the directories for specific plugins, a markdown file with info on adding a plugin, and an `index.js` file that loads the necessary plugins
+- `/standalone/`: defines the standalone version
 - `/style/`: contains all the `.scss` that style the Swagger UI web page
