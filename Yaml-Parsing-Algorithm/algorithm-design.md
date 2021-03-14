@@ -14,3 +14,25 @@ frequency of keyword occurrence and level the keyword was found in.
 ## Approach
 
 ## Implementation
+
+__DRAFT__
+
+parse(keyword, config_path):
+Results variable should be created with this structure:
+results = {matched_key: {rank:3, matches: 13}}
+
+1. load YAML from file
+2. Set contents to an immutable global variable
+3. generate Regex for keyword
+4. Iterate through first level keys:
+    5. Compare regex to the key itself
+        - if match:
+            - results[key][rank] = 1
+            - results[key][matces] += 1
+        - end if
+        parse_key()
+
+
+parse_key(map, key):
+    1. if key is iterable:
+            - 
