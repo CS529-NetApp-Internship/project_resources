@@ -53,7 +53,7 @@ Variables:
 
 Methods/Functions:
   - getReport() : returns {MainKey: "",
-                           FirstMatchLevel: ""
+                           FirstMatchLevel: 0,
                            TotalMatches: 0}
   - parseKey(dict => object, currentLevel => int):
     - Iterate through each dict key as i
